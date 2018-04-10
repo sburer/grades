@@ -1,0 +1,12 @@
+#this file needs to be inserted at the link:
+#https://neos-server.org/neos/solvers/milp:Gurobi/AMPL.html
+#into the Commands file
+
+solve;
+
+printf "The optimal breakpoints are a = %f and b = %f \n",a,b;
+
+printf "The total number of pseudoborderline students w.r.t. a and b are %f\n", pseudoBorder;
+
+printf "The total number of pseudoborderline students w.r.t. a  are %f\n", sum{i in ind_a}(alphaeps_a[i]-alpha_a[i]);
+printf "The total number of pseudoborderline students w.r.t.  are %f\n", sum{i in ind_b}(alphaeps_b[i]-alpha_b[i]);
